@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: Woman
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
   name: Sandra
-  neutral:
-    emotion: 0
+  characterEmotions:
+  - emotion: 0
     image: {fileID: 21300000, guid: 3a421cd14bea90546b2ddda0b278f3c2, type: 3}
-  happy:
-    emotion: 1
-    image: {fileID: 0}
-  angry:
-    emotion: 2
-    image: {fileID: 0}
+  - emotion: 1
+    image: {fileID: -4011172201704675310, guid: 7fa7edf3976c4c846959495aebefcac9, type: 3}
+  - emotion: 2
+    image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
