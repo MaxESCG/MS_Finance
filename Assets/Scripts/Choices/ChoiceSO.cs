@@ -16,7 +16,18 @@ public class ChoiceSO : ScriptableObject
 [Serializable]
 public class Option
 {
-    [SerializeField] string text;
+    [SerializeField, TextArea(3,20)] string text;
+    [Header("Score changes")]
+    [SerializeField] private int profit;
+    [SerializeField] private Status profitStatus;
+    [SerializeField] private int satisfaction;
+    [SerializeField] private Status satisfactionStatus;
+
 
     public string Text => text;
+
+    public int Profit => profit;
+    public Status ProfitStatus => profitStatus;
+    public int Satisfaction => satisfaction;
+    public Status SatisfactionStatus => satisfactionStatus;
 }

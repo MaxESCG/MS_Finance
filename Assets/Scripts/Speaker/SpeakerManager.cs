@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class SpeakerManager : MonoBehaviour
@@ -10,6 +11,8 @@ public class SpeakerManager : MonoBehaviour
 
     SpeakerTextSO currentSpeakerData;
     int currTextID;
+
+    public UnityEvent SpeakingFinished;
 
     public void SetNewConversation(SpeakerTextSO textData)
     {
@@ -49,6 +52,8 @@ public class SpeakerManager : MonoBehaviour
     {
         Debug.Log("It's over wrap it up");
         Hide();
+        SpeakingFinished?.Invoke();
+        SpeakingFinished.RemoveAllListeners();
     }
 
     private void Start()

@@ -10,15 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77be8d3abc4d614408c62dfb3862c314, type: 3}
-  m_Name: Text
+  m_Name: 1B_SpeakerText
   m_EditorClassIdentifier: Assembly-CSharp::SpeakerTextSO
   dialogues:
   - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
     emotion: 0
-    text: I am neutral :|
-  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
-    emotion: 1
-    text: I am happy :)
-  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
-    emotion: 2
-    text: I am angry >:(
+    text: You sit down and have a thorough review with the client, and are able to
+      get the cost within their budget but sacrificing some of the thoroughness of
+      your budget.

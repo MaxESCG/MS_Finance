@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ChoiceManager : MonoBehaviour
@@ -17,16 +18,20 @@ public class ChoiceManager : MonoBehaviour
 
     List<GameObject> currentOptions;
 
+    ScoreManager scoreM;
+
+
+    public UnityEvent ChoiceMade;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Hide();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Setup(ManagerPacket managers)
     {
-        
+        scoreM = managers.ScoreManager;
     }
 
     public void StartNewChoice(ChoiceSO choice)
@@ -52,7 +57,17 @@ public class ChoiceManager : MonoBehaviour
 
         if (uiScript != null)
         {
-            uiScript.Setup(option);
+            uiScript.Setup(option, () => 
+            { 
+                Debug.Log($"Button {option.Text} pressed");
+                scoreM.AddProfit(option.Profit, option.ProfitStatus);
+                scoreM.AddSatisfaction(option.Satisfaction, option.SatisfactionStatus);
+                Hide();
+
+                ChoiceMade?.Invoke();
+                
+                
+            });
         }
 
         currentOptions.Add(newGO);
