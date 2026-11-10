@@ -18,7 +18,8 @@ public class ChoiceManager : MonoBehaviour
 
     List<GameObject> currentOptions;
 
-    ScoreManager scoreM;
+    [SerializeField] ScoreManager scoreM;
+    [SerializeField] SequenceManager sequenceM;
 
 
     public UnityEvent ChoiceMade;
@@ -62,6 +63,11 @@ public class ChoiceManager : MonoBehaviour
                 Debug.Log($"Button {option.Text} pressed");
                 scoreM.AddProfit(option.Profit, option.ProfitStatus);
                 scoreM.AddSatisfaction(option.Satisfaction, option.SatisfactionStatus);
+
+                if(option.NextSequence != null)
+                {
+                    sequenceM.QueueSequence(option.NextSequence);
+                }
                 Hide();
 
                 ChoiceMade?.Invoke();

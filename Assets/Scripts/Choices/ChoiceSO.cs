@@ -1,9 +1,10 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Choice", order = 1)]
 
-public class ChoiceSO : ScriptableObject
+public class ChoiceSO : SequenceStepSO
 {
     [SerializeField] private string choiceText;
     [SerializeField] private Option[] options;
@@ -22,6 +23,7 @@ public class Option
     [SerializeField] private Status profitStatus;
     [SerializeField] private int satisfaction;
     [SerializeField] private Status satisfactionStatus;
+    [SerializeField] private SequenceSO nextSequence;
 
 
     public string Text => text;
@@ -30,4 +32,5 @@ public class Option
     public Status ProfitStatus => profitStatus;
     public int Satisfaction => satisfaction;
     public Status SatisfactionStatus => satisfactionStatus;
+    public SequenceSO NextSequence => nextSequence;
 }

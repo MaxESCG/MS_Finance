@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Speaker Text", order = 1)]
-public class SpeakerTextSO : ScriptableObject
+public class SpeakerTextSO : SequenceStepSO
 {
     [SerializeField] DialogueData[] dialogues;
 

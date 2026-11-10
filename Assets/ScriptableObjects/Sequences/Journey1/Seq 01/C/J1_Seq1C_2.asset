@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b23ff3016b9ed48bf93071131b3772, type: 3}
+  m_Name: J1_Seq1C_2
+  m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
+  choiceText: 
+  options:
+  - text: You sit down and have a thorough review with the client, and suggest that
+      for items they are unsure about you add in 'provisional sums'. These prov sums
+      are estimates of what you believe the items on the exclusions or clarification
+      lists will cost, even though you are not sure if they are required at this
+      stage.
+    profit: 1
+    profitStatus: 0
+    satisfaction: 10
+    satisfactionStatus: 0
+    nextSequence: {fileID: 11400000, guid: ab83cf6f7f7381a4095c6d853be3ac8a, type: 2}
+  - text: You sit down and have a thorough review with the client, and through discussion
+      alter and change some of the exclusions and clarifications.
+    profit: 0
+    profitStatus: 1
+    satisfaction: 0
+    satisfactionStatus: 0
+    nextSequence: {fileID: 11400000, guid: 35084bf268dca014dab858f9d5fbe4c5, type: 2}

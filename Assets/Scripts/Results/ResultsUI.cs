@@ -15,18 +15,13 @@ public class ResultsUI : MonoBehaviour
     [SerializeField] Color goodColour;
     [SerializeField] Color badColour;
 
-    ScoreManager scoreM;
+    [SerializeField] ScoreManager scoreM;
 
     public UnityEvent FinishedViewingResults;
 
     private void Start()
     {
         Hide();
-    }
-
-    public void Setup(ScoreManager scoreManager)
-    {
-        scoreM = scoreManager;
     }
 
     

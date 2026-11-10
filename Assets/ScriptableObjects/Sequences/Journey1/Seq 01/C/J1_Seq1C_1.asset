@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77be8d3abc4d614408c62dfb3862c314, type: 3}
+  m_Name: J1_Seq1C_1
+  m_EditorClassIdentifier: Assembly-CSharp::SpeakerTextSO
+  dialogues:
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 0
+    text: The client is a little disappointed. They appreciate the effort put in,
+      but are frustrated by the lack of certainty at this stage, and they ask you
+      what you intend to do about it.

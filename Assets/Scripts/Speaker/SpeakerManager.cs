@@ -53,7 +53,6 @@ public class SpeakerManager : MonoBehaviour
         Debug.Log("It's over wrap it up");
         Hide();
         SpeakingFinished?.Invoke();
-        SpeakingFinished.RemoveAllListeners();
     }
 
     private void Start()

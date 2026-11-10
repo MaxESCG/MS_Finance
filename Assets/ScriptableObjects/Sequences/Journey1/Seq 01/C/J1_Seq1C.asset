@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7383c37ed741e014eae2581eb50ef83c, type: 3}
+  m_Name: J1_Seq1C
+  m_EditorClassIdentifier: Assembly-CSharp::SequenceSO
+  steps:
+  - {fileID: 11400000, guid: 4045153bb923aa048939b22510832d3d, type: 2}
+  - {fileID: 11400000, guid: 991f8771f0006f04dbdb1410fa7f0b2a, type: 2}
+  - {fileID: 11400000, guid: f42e01347cd72294696b63e9e1fa5d87, type: 2}

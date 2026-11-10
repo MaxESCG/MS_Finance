@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77be8d3abc4d614408c62dfb3862c314, type: 3}
+  m_Name: J1_Seq1_01
+  m_EditorClassIdentifier: Assembly-CSharp::SpeakerTextSO
+  dialogues:
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 1
+    text: A client invites you to tender via a two stage for a new college in Sussex,
+      for roughly 10-12 million pounds. There is a RIBA Stage 3 pack of drawings
+      for the project. You and two other contractors accept the invite to tender.
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 0
+    text: The client has worked with you before and was 80% happy with previous performance.
+      You are starting with a score of 80% client satisfaction.
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 0
+    text: Your standard overhead and profit is 10%. You are starting with a profit
+      score of 10%.
