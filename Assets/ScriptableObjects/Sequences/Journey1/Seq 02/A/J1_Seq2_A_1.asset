@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77be8d3abc4d614408c62dfb3862c314, type: 3}
+  m_Name: J1_Seq2_A_1
+  m_EditorClassIdentifier: Assembly-CSharp::SpeakerTextSO
+  showScore: 1
+  dialogues:
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 0
+    text: 'Pros: your internal teams time is free to review other important project
+      matters (lofistics, supply chain, H&S etc.) which will increase the tender
+      return quality. The client''s satisfation increases due to your attention to
+      detail. There was a cost to your profit, but it was minimal.'
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 0
+    text: 'Cons: your internal team has spent less time reviewing the scope of works
+      and drawings themselves. During construction phase this puts them at risk of
+      not being as on top of the project requirements and costly mistakes can occur
+      as a result. As your team hired a non-specialist bill of quantities contractor
+      some areas of Scope may have been missed which your team are also not aware
+      of. Your profit is put at risk as a result, and this could come back to bite
+      you during construction phase...'

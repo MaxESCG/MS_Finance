@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b23ff3016b9ed48bf93071131b3772, type: 3}
+  m_Name: J1_Seq2_2
+  m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
+  showScore: 1
+  choiceText: What do you choose?
+  options:
+  - text: You hire a Bill of Quantities contractor who writes the scopes of works
+      for all packages. The Bill of Quantities contractor is not a specialist in
+      any packages and is inexpensive.
+    profit: -1
+    profitStatus: 2
+    satisfaction: 10
+    satisfactionStatus: 2
+    nextSequence: {fileID: 11400000, guid: c1b45d819ee817e4195ffc0a0b248396, type: 2}
+  - text: You hire a Bill of Quantities specialist who writes the scopes of works
+      for the 'problem' packages, but all the other packages are reviewed with the
+      in house team who will be building the project if the tender goes well. As
+      the writer is a specialist they are expensive but you save a small amount of
+      money by using your internal staff already costed to the tender for writing
+      the other packages.
+    profit: 3
+    profitStatus: 0
+    satisfaction: 10
+    satisfactionStatus: 1
+    nextSequence: {fileID: 11400000, guid: 24eb14058b5558946bc03adefad10bd0, type: 2}
+  - text: You hire a Bill of Quantities specialist who writes the scopes of works
+      for all the packages. As the writer is a specialist they are expensive.
+    profit: -5
+    profitStatus: 1
+    satisfaction: 10
+    satisfactionStatus: 1
+    nextSequence: {fileID: 11400000, guid: 348512295168b1043941cb331e875956, type: 2}

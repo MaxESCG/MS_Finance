@@ -6,6 +6,9 @@ public class SequenceManager : MonoBehaviour
     [SerializeField] private SpeakerManager speakerManager;
     [SerializeField] private ResultsUI results;
     [SerializeField] private ChoiceManager choiceManager;
+    [SerializeField] private GameOverUI gameOverUI;
+    [SerializeField] private ScoreManager scoreManager;
+    [SerializeField] private ScoreUI scoreUI;
 
     private Queue<SequenceSO> sequenceQueue;
 
@@ -30,6 +33,7 @@ public class SequenceManager : MonoBehaviour
         speakerManager.SpeakingFinished.RemoveAllListeners();
         choiceManager.ChoiceMade.RemoveAllListeners();
         results.FinishedViewingResults.RemoveAllListeners();
+        gameOverUI.FinishedGameOver.RemoveAllListeners();
 
         // If there are more steps in the sequence, continue sequence, otherwise, start next sequence.
 
@@ -55,26 +59,35 @@ public class SequenceManager : MonoBehaviour
 
         Debug.Log($"Curr step type: {currStep.GetType()}");
 
-        if(currStep.GetType() == typeof(SpeakerTextSO))
+        if(currStep.showScore)
+        {
+            scoreUI.Show();
+        }
+        else
+        {
+            scoreUI.Hide();
+        }
+
+        if (currStep.GetType() == typeof(SpeakerTextSO))
         {
             // Start dialogue 
             speakerManager.SetNewConversation((SpeakerTextSO)currStep);
-            speakerManager.SpeakingFinished.AddListener(() => 
-            { 
-                OnSequenceStepFinished(); 
+            speakerManager.SpeakingFinished.AddListener(() =>
+            {
+                OnSequenceStepFinished();
             });
         }
-        else if(currStep.GetType() == typeof(ChoiceSO))
+        else if (currStep.GetType() == typeof(ChoiceSO))
         {
             // Start choice
             choiceManager.StartNewChoice((ChoiceSO)currStep);
             choiceManager.ChoiceMade.AddListener(() =>
             {
-                OnSequenceStepFinished(); 
+                OnSequenceStepFinished();
             });
 
         }
-        else if(currStep.GetType() == typeof(ResultsSO))
+        else if (currStep.GetType() == typeof(ResultsSO))
         {
             // Start result
             results.SetResults();
@@ -83,12 +96,46 @@ public class SequenceManager : MonoBehaviour
                 OnSequenceStepFinished();
             });
         }
-        else if(currStep.GetType() == typeof(SequenceQueuerStep))
+        else if (currStep.GetType() == typeof(SequenceQueuerStep))
         {
             Debug.Log($"Queuer called");
             SequenceQueuerStep step = (SequenceQueuerStep)currStep;
 
             QueueSequence(step.NextSequence);
+            OnSequenceStepFinished();
+        }
+        else if (currStep.GetType() == typeof(GameOverSO))
+        {
+            GameOverSO gameOverSO = (GameOverSO)currStep;
+
+            gameOverUI.CallGameOver(gameOverSO);
+
+            gameOverUI.FinishedGameOver.AddListener(() =>
+            {
+                OnSequenceStepFinished();
+            });
+        }
+        else if(currStep.GetType() == typeof(ScoreSetterStepSO))
+        {
+            ScoreSetterStepSO newScores = (ScoreSetterStepSO)currStep;
+
+            scoreManager.Setup(newScores.StartingSatisfaciton, newScores.StartingProfit);
+            OnSequenceStepFinished();
+        }
+        else if(currStep.GetType() == typeof(PreviousChoiceSplit))
+        {
+            PreviousChoiceSplit previousChoiceSplit = (PreviousChoiceSplit)currStep;
+
+            string resultID = choiceManager.GetOptionChosenID(previousChoiceSplit.ChoiceToEvaluate.Id);
+
+            for(int i = 0; i < previousChoiceSplit.ChoiceResults.Length; i++)
+            {
+                if (previousChoiceSplit.ChoiceResults[i].OptionID == resultID)
+                {
+                    QueueSequence(previousChoiceSplit.ChoiceResults[i].ResultingSequence);
+                }
+            }
+
             OnSequenceStepFinished();
         }
     }

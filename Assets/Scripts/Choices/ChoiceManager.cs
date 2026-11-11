@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 public class ChoiceManager : MonoBehaviour
 {
@@ -21,13 +20,20 @@ public class ChoiceManager : MonoBehaviour
     [SerializeField] ScoreManager scoreM;
     [SerializeField] SequenceManager sequenceM;
 
+    private ChoiceSO currentChoice;
+
 
     public UnityEvent ChoiceMade;
+
+    // Choice ID, option ID
+    public Dictionary<string, string> ChoicesMade = new Dictionary<string, string>();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Hide();
+
+        ChoicesMade = new Dictionary<string, string>();
     }
 
     public void Setup(ManagerPacket managers)
@@ -71,12 +77,19 @@ public class ChoiceManager : MonoBehaviour
                 Hide();
 
                 ChoiceMade?.Invoke();
-                
-                
+
+                ChoicesMade.Add(currentChoice.Id, option.id);
             });
         }
 
         currentOptions.Add(newGO);
+    }
+
+    public string GetOptionChosenID(string choiceID)
+    {
+        ChoicesMade.TryGetValue(choiceID, out string optionID);
+
+        return optionID;
     }
 
     private void Clear()

@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b23ff3016b9ed48bf93071131b3772, type: 3}
   m_Name: J1_Seq1A_02
   m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
+  showScore: 0
+  Id: 08896160-c9a8-4511-9bed-5d7dc110b52f
   choiceText: What do you do?
   options:
-  - text: 'You call the client to personally explain to him what the word ''budget''
+  - id: 
+    text: 'You call the client to personally explain to him what the word ''budget''
       means as he is clearly unaware, and tell your Regional Director they should
       have given you more staff if they wanted you to do a good job.
 
@@ -24,7 +27,8 @@ MonoBehaviour:
     satisfaction: 0
     satisfactionStatus: 0
     nextSequence: {fileID: 11400000, guid: e53865c64c50517458ff9e1bbb24cc5f, type: 2}
-  - text: Following the client's disappointment you re-review the information and
+  - id: 
+    text: Following the client's disappointment you re-review the information and
       go over and above expectations to provide a thorough and accurate budget price.
     profit: 0
     profitStatus: 1

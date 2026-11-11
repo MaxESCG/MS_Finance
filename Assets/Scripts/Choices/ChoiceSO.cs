@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ChoiceSO : SequenceStepSO
 {
+    [ScriptableObjectId] public string Id;
     [SerializeField] private string choiceText;
     [SerializeField] private Option[] options;
 
@@ -17,6 +18,7 @@ public class ChoiceSO : SequenceStepSO
 [Serializable]
 public class Option
 {
+    [ScriptableObjectId] public string id;
     [SerializeField, TextArea(3,20)] string text;
     [Header("Score changes")]
     [SerializeField] private int profit;

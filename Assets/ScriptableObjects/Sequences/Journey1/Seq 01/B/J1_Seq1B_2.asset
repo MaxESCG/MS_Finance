@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b23ff3016b9ed48bf93071131b3772, type: 3}
   m_Name: J1_Seq1B_2
   m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
-  choiceText: 
+  showScore: 0
+  choiceText: What should you do?
   options:
   - text: You sit down and have a thorough review with the client, and are able to
       get the cost within their budget but sacrificing some of the thoroughness of

@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b23ff3016b9ed48bf93071131b3772, type: 3}
   m_Name: J1_Seq1_02
   m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
+  showScore: 1
+  Id: 69dcbbf4-aad5-4a5a-95da-24f8e379a340
   choiceText: What do you choose to do?
   options:
-  - text: 'You put one member of staff on the project to put together a rough price.
+  - id: c090e7d5-646d-4ba7-a82a-03156155c406
+    text: 'You put one member of staff on the project to put together a rough price.
       The staff member is stretched and unable to fully review all the drawings.
       There is a risk they have missed pricing some parts of the design, but it is
       just a budget right?
@@ -25,7 +28,8 @@ MonoBehaviour:
     satisfaction: -20
     satisfactionStatus: 0
     nextSequence: {fileID: 11400000, guid: bca0be70566d8514dac97947db7da228, type: 2}
-  - text: You put a small team on the project who reviews the information and puts
+  - id: cd3715fb-1184-419a-bcbb-bf35e2262c69
+    text: You put a small team on the project who reviews the information and puts
       together a very thorough tender. One member of the team is overly cautious
       and suggests they allow for anything they can possibly think of that might
       be required, regardless of whether it is on the drawings and scope information.
@@ -35,7 +39,8 @@ MonoBehaviour:
     satisfaction: -10
     satisfactionStatus: 0
     nextSequence: {fileID: 11400000, guid: 66ff626aa50d64742a3b672a79df4de4, type: 2}
-  - text: You put a small team on the projects with adequate checks and balances.
+  - id: bfaf2724-de6b-4fb4-82b3-79269abd2e15
+    text: You put a small team on the projects with adequate checks and balances.
       They put together a thorough exclusion and clarification list to identify what
       is or is not included in the budget.
     profit: 0

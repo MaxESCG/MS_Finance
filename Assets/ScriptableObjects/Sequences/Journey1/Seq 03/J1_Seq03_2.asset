@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b23ff3016b9ed48bf93071131b3772, type: 3}
+  m_Name: J1_Seq03_2
+  m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
+  showScore: 1
+  choiceText: How much should you put into the budget?
+  options:
+  - text: "You throw everything at it. Taking the price up to \xA311,999,999. Still
+      technically in budget\u2026"
+    profit: 4
+    profitStatus: 0
+    satisfaction: -5
+    satisfactionStatus: 0
+    nextSequence: {fileID: 0}
+  - text: "You add only those which are truly necessary, taking the price up to \xA311,600,000."
+    profit: 1
+    profitStatus: 0
+    satisfaction: 10
+    satisfactionStatus: 0
+    nextSequence: {fileID: 0}
+  - text: "You add items which are truly necessary, and a few items you think you
+      could reasonable defend as being requred, taking the price up to \xA311,700,000."
+    profit: 2
+    profitStatus: 0
+    satisfaction: 10
+    satisfactionStatus: 0
+    nextSequence: {fileID: 0}

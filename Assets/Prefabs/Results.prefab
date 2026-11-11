@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 550, y: -439}
+  m_AnchoredPosition: {x: 550, y: -389}
   m_SizeDelta: {x: 1036, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &336833155365492713
@@ -136,6 +136,7 @@ MonoBehaviour:
   satisfactionString: 'Client Satisfaction:'
   goodColour: {r: 0.3528756, g: 0.8301887, b: 0.23104309, a: 1}
   badColour: {r: 0.83137256, g: 0.28771555, b: 0.23137257, a: 1}
+  scoreM: {fileID: 0}
   FinishedViewingResults:
     m_PersistentCalls:
       m_Calls: []

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77be8d3abc4d614408c62dfb3862c314, type: 3}
   m_Name: J1_Seq1_01
   m_EditorClassIdentifier: Assembly-CSharp::SpeakerTextSO
+  showScore: 0
   dialogues:
   - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
     emotion: 1

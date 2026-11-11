@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77be8d3abc4d614408c62dfb3862c314, type: 3}
+  m_Name: J1_Seq2_B_1
+  m_EditorClassIdentifier: Assembly-CSharp::SpeakerTextSO
+  showScore: 0
+  dialogues:
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 0
+    text: 'Pros: your internal team has been able to thoroughly review 75% of the
+      project scopes themselves and extremely comfortable with the project requirements.
+      They have fed these requirements into the programme, logistics and supply chain.
+      Your client satisfaction increases because they can see your attention to detail,
+      and using your internal teams joint knowledge you have closed scope gaps which
+      would have been paid out of your profit if discovered later. This could set
+      you up quite well for the construction phase...'
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 0
+    text: 'Cons: the specialist was very expensive, even with carrying out most of
+      the work in house.
+
+'

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -14,10 +15,14 @@ public class ScoreManager : MonoBehaviour
     private int changeInSatisfaction;
     private int changeInProfit;
 
+    public UnityEvent<CurrentScores> ValuesUpdated;
+
     public void Setup(int startingSatisfaction, int startingProfit)
     {
         satisfaction = startingSatisfaction;
         profit = startingProfit;
+
+        ValuesUpdated?.Invoke(GetScores());
     }
 
     public void AddSatisfaction(int satisfaction, Status newStatus)
@@ -26,6 +31,8 @@ public class ScoreManager : MonoBehaviour
         this.satisfactionStatus = newStatus;
 
         changeInSatisfaction += satisfaction;
+
+        ValuesUpdated?.Invoke(GetScores());
     }
 
     public void AddProfit(int profit, Status newStatus)
@@ -34,6 +41,8 @@ public class ScoreManager : MonoBehaviour
         this.profitStatus = newStatus;
 
         changeInProfit += profit;
+
+        ValuesUpdated?.Invoke(GetScores());
     }
 
     public void AddResultMessage(string message)
@@ -68,6 +77,15 @@ public class ScoreManager : MonoBehaviour
 
         return scoreUpdate;
     }
+
+    private CurrentScores GetScores()
+    {
+        CurrentScores scores = new CurrentScores();
+        scores.Satisfaction = this.satisfaction;
+        scores.Profit = this.profit;
+
+        return scores;
+    }
 }
 
 public class ScoreUpdate
@@ -82,6 +100,12 @@ public class ScoreUpdate
 
     public Status ProfitStatus;
     public Status SatisfactionStatus;
+}
+
+public class CurrentScores
+{
+    public int Satisfaction;
+    public int Profit;
 }
 
 public enum Status

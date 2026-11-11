@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77be8d3abc4d614408c62dfb3862c314, type: 3}
+  m_Name: J1_Seq2_C_1
+  m_EditorClassIdentifier: Assembly-CSharp::SpeakerTextSO
+  showScore: 0
+  dialogues:
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 0
+    text: 'Pros: your internal teams time is free to review the programme, other
+      logistics requirements for the project, and get the supply chain lined up for
+      pricing the project which will increase the quality and timeliness of your
+      client tender return. Your client satisfaction increases because they can see
+      your attention to detail on these items. The specialist produces excellent
+      quality scope of works for all packages and nearly 100% of potential scope
+      gaps are captured. This could really set you up for an excellent construction
+      phase...
+
+'
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 0
+    text: 'Cons: the specialist was very expensive, and carried out a significant
+      amount of work.
+
+'
