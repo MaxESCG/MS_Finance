@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SequenceSO
   steps:
   - {fileID: 11400000, guid: ff51d5c6b348e23409777f845092e23a, type: 2}
+  - {fileID: 11400000, guid: f9a2322fa73d0d043bd2c6459f357ee3, type: 2}

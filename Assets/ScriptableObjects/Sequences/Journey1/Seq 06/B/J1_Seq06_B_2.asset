@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b23ff3016b9ed48bf93071131b3772, type: 3}
+  m_Name: J1_Seq06_B_2
+  m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
+  showScore: 0
+  Id: 0957275b-f0ec-4d6e-b329-475067aa5fef
+  choiceText: 
+  options:
+  - id: 8ae7259e-7fd0-4ce7-9b0d-601cde7404fd
+    text: You go into the negotiation reasonably and agree a figure. The client puts
+      out their hand to shake and you go to shake, then pull your hand back and say
+      "only if you add a final act of goodwill 10 grand on top".
+    profit: 0
+    profitStatus: 0
+    satisfaction: 0
+    satisfactionStatus: 0
+    nextSequence: {fileID: 11400000, guid: c079ac708aa0708408ad377694e650db, type: 2}
+  - id: 8ae7259e-7fd0-4ce7-9b0d-601cde7404fd
+    text: You go into the negotiation reasonably and present your figure. The client
+      presents a slightly lower figure. You agree, sacrificing a small amount of
+      your profit even though you are contractually due the money and could argue
+      it.
+    profit: 0
+    profitStatus: 0
+    satisfaction: 0
+    satisfactionStatus: 0
+    nextSequence: {fileID: 11400000, guid: 234667a8b4c111a498585a05e868da48, type: 2}

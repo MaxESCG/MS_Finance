@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77be8d3abc4d614408c62dfb3862c314, type: 3}
+  m_Name: J1_Seq06_A_II_1
+  m_EditorClassIdentifier: Assembly-CSharp::SpeakerTextSO
+  showScore: 0
+  dialogues:
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 0
+    text: "Your client is surprised but appreciates your approach. They manage to
+      save some money they thought you were due which can now be spent on future
+      projects. Maybe even future projects with your company\u2026 come to think
+      of it they have a similar one just due out for tender, would you mind have
+      a look?"

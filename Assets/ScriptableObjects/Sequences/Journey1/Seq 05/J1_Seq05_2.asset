@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b23ff3016b9ed48bf93071131b3772, type: 3}
+  m_Name: J1_Seq05_2
+  m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
+  showScore: 0
+  Id: 863ec1f1-fb4b-453c-ae66-784a17572d42
+  choiceText: 
+  options:
+  - id: afb49af8-9cc8-441c-8f29-a12d4ef26ef5
+    text: "You speak to the design team who confirm that the level can be built up
+      by putting insulation under the new flooring. They will need to update their
+      design to show this and inform the client. You can attempt to recover these
+      costs from the screeder via a contra-charge. It will cost \xA310 per m2."
+    profit: -4
+    profitStatus: 0
+    satisfaction: -15
+    satisfactionStatus: 0
+    nextSequence: {fileID: 11400000, guid: 98aa08deaac3ade4593be111e87c6f13, type: 2}
+  - id: afb49af8-9cc8-441c-8f29-a12d4ef26ef5
+    text: "You speak to the floorer who confirms that they can break out the existing
+      screed and pour new screed themselves. It will be time consuming and cost \xA315
+      per m2 but the design does not need to be updated and other works could carry
+      on in other areas so there would be no overall programme delay and the client
+      would not need to be notified."
+    profit: -1
+    profitStatus: 0
+    satisfaction: 0
+    satisfactionStatus: 1
+    nextSequence: {fileID: 11400000, guid: 14ca4c5120aa2c4489aff0c30c32ffc7, type: 2}
+  - id: afb49af8-9cc8-441c-8f29-a12d4ef26ef5
+    text: Contractually you believe that the screeder is required to return and make
+      good for free. You speak to the screeder and demand they return. They are extremely
+      reluctant and demand a meeting with your team.
+    profit: -3
+    profitStatus: 0
+    satisfaction: -20
+    satisfactionStatus: 0
+    nextSequence: {fileID: 11400000, guid: 090d8c9d33cb12c4089227a525d0d7ed, type: 2}

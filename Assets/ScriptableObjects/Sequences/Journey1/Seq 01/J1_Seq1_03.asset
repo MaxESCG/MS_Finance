@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: J1_Seq1_03
   m_EditorClassIdentifier: Assembly-CSharp::ScoreSetterStepSO
   showScore: 1
-  startingSatisfaction: 80
-  startingProfit: 10
+  modifyType: 0
+  satisfaction: 80
+  profit: 10
+  satisfactionStatus: 0
+  profitStatus: 0

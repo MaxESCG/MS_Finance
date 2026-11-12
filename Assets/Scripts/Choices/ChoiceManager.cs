@@ -46,6 +46,8 @@ public class ChoiceManager : MonoBehaviour
         Clear();
         Show();
 
+        currentChoice = choice;
+
         title.text = choice.ChoiceText;
 
         for(int i = 0; i < choice.Options.Length; i++)
@@ -78,6 +80,9 @@ public class ChoiceManager : MonoBehaviour
 
                 ChoiceMade?.Invoke();
 
+                Debug.Log($"Choices made dict: {ChoicesMade}");
+                Debug.Log($"choice: {currentChoice}");
+                Debug.Log($"option: {option}");
                 ChoicesMade.Add(currentChoice.Id, option.id);
             });
         }

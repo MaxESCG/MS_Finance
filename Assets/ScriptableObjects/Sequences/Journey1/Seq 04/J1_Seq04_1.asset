@@ -16,8 +16,8 @@ MonoBehaviour:
   choiceToEvaluate: {fileID: 11400000, guid: c393d37a81e0615468ae5f6d78ccdcfd, type: 2}
   choiceResults:
   - optionID: c090e7d5-646d-4ba7-a82a-03156155c406
-    resultingSequence: {fileID: 0}
+    resultingSequence: {fileID: 11400000, guid: a9cbb2c3e6c25a64184a2d976eec1fc0, type: 2}
   - optionID: cd3715fb-1184-419a-bcbb-bf35e2262c69
-    resultingSequence: {fileID: 0}
+    resultingSequence: {fileID: 11400000, guid: 0d76dc2b550781f4893d36aadeffee02, type: 2}
   - optionID: bfaf2724-de6b-4fb4-82b3-79269abd2e15
-    resultingSequence: {fileID: 0}
+    resultingSequence: {fileID: 11400000, guid: 8fe6053d27068ac46850fc78048089ae, type: 2}

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b23ff3016b9ed48bf93071131b3772, type: 3}
+  m_Name: J1_Seq06_C_2
+  m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
+  showScore: 0
+  Id: f864ae88-1e31-4a30-88e3-55043d58e98e
+  choiceText: 
+  options:
+  - id: bf2131dc-2b61-4629-9752-f939c7e3f497
+    text: You decide minimal preperation is required. Your client loves you. You're
+      sure to secure the figure you want without any issue.
+    profit: 0
+    profitStatus: 0
+    satisfaction: 0
+    satisfactionStatus: 0
+    nextSequence: {fileID: 11400000, guid: 594e098979055bd4eb98cde3fbad19c7, type: 2}
+  - id: bf2131dc-2b61-4629-9752-f939c7e3f497
+    text: You go into the negotiation reasonably and present your figure. The client
+      presents a slightly lower figure. You agree, sacrificing a small amount of
+      your profit even though you are contractually due the money and could argue
+      it.
+    profit: 0
+    profitStatus: 0
+    satisfaction: 0
+    satisfactionStatus: 0
+    nextSequence: {fileID: 11400000, guid: efd26979070817f429f15232810f5d9b, type: 2}

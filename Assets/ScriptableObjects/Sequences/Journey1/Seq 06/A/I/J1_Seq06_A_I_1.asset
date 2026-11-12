@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77be8d3abc4d614408c62dfb3862c314, type: 3}
+  m_Name: J1_Seq06_A_I_1
+  m_EditorClassIdentifier: Assembly-CSharp::SpeakerTextSO
+  showScore: 0
+  dialogues:
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 2
+    text: Your client is absolutely furious. They have no choice but to pay you a
+      significant sum to close out the final account, but you are blacklisted from
+      future projects with them directly. The business reputation is significantly
+      damaged in the process and concerns are raised on similar projects for similar
+      clients who have heard how aggressively the fine account was handled.

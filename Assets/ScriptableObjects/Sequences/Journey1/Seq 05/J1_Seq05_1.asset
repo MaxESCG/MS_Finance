@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77be8d3abc4d614408c62dfb3862c314, type: 3}
+  m_Name: J1_Seq05_1
+  m_EditorClassIdentifier: Assembly-CSharp::SpeakerTextSO
+  showScore: 0
+  dialogues:
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 0
+    text: 'Now the project is on site your main role is to track any changes to the
+      design, and ensure your subcontractors are sent instructions for any new work
+      that arises, and paid for those instructions.
+
+'
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 0
+    text: The old building has been demolished, your ground work has been laid, the
+      new building has been built and all plumbing/electrical/carpentry has been
+      installed. It is time to complete the flooring.
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 0
+    text: You discover that the screed installer has installed the screed too low
+      which means that the floor levels are incorrect.
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 0
+    text: The screeder has been paid and while they have a few men left on site doing
+      final touches, they refuse to fix the level saying they were told by the site
+      team the level to screed to.

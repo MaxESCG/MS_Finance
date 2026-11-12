@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: J1_Seq2_2
   m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
   showScore: 1
+  Id: 051621df-5410-424e-ac4a-4dd9ab9f2f9c
   choiceText: What do you choose?
   options:
-  - text: You hire a Bill of Quantities contractor who writes the scopes of works
+  - id: 2910845e-45df-4889-9c5f-a7376e3f0bf8
+    text: You hire a Bill of Quantities contractor who writes the scopes of works
       for all packages. The Bill of Quantities contractor is not a specialist in
       any packages and is inexpensive.
     profit: -1
@@ -23,7 +25,8 @@ MonoBehaviour:
     satisfaction: 10
     satisfactionStatus: 2
     nextSequence: {fileID: 11400000, guid: c1b45d819ee817e4195ffc0a0b248396, type: 2}
-  - text: You hire a Bill of Quantities specialist who writes the scopes of works
+  - id: 6b65a091-d06a-424a-b4e7-9789fc135ef8
+    text: You hire a Bill of Quantities specialist who writes the scopes of works
       for the 'problem' packages, but all the other packages are reviewed with the
       in house team who will be building the project if the tender goes well. As
       the writer is a specialist they are expensive but you save a small amount of
@@ -34,7 +37,8 @@ MonoBehaviour:
     satisfaction: 10
     satisfactionStatus: 1
     nextSequence: {fileID: 11400000, guid: 24eb14058b5558946bc03adefad10bd0, type: 2}
-  - text: You hire a Bill of Quantities specialist who writes the scopes of works
+  - id: ce482aac-a42a-4ad6-952a-6801eca75d52
+    text: You hire a Bill of Quantities specialist who writes the scopes of works
       for all the packages. As the writer is a specialist they are expensive.
     profit: -5
     profitStatus: 1

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b23ff3016b9ed48bf93071131b3772, type: 3}
+  m_Name: J1_Seq06_A_2
+  m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
+  showScore: 0
+  Id: 28579316-a4fe-4698-8c07-39833bb1b28d
+  choiceText: 'How should you handle the final '
+  options:
+  - id: 59a39d06-d2be-4ced-b63b-f65c05426251
+    text: You decide to go into the negotiation with aggressive tactics and well
+      researched contractual arguments. If it says it in the contract, you are due
+      it, no excuses. Will it alienate your client and exclude you from future work,
+      or will they respect how well researched your arguments are?
+    profit: 10
+    profitStatus: 0
+    satisfaction: -50
+    satisfactionStatus: 0
+    nextSequence: {fileID: 11400000, guid: 49b2d061962dbac47a742640b2ec25e9, type: 2}
+  - id: 59a39d06-d2be-4ced-b63b-f65c05426251
+    text: You agree with your team a number of items you believe are most important
+      and agree to conceed on all others to gain good graces from your client. You
+      are risking your profit for this year, and there is no guarantee it will secure
+      more work, but with a client satisfaction score this low is it worth a shot?
+    profit: 5
+    profitStatus: 0
+    satisfaction: 15
+    satisfactionStatus: 0
+    nextSequence: {fileID: 11400000, guid: 008df2f8c4121814d8b767d9a1a63144, type: 2}

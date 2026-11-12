@@ -17,6 +17,9 @@ public class ScoreManager : MonoBehaviour
 
     public UnityEvent<CurrentScores> ValuesUpdated;
 
+    public int Satisfaction => satisfaction;
+    public int Profit => profit;
+
     public void Setup(int startingSatisfaction, int startingProfit)
     {
         satisfaction = startingSatisfaction;

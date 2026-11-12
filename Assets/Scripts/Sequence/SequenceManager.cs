@@ -24,7 +24,7 @@ public class SequenceManager : MonoBehaviour
     {
         if(sequenceQueue == null) { sequenceQueue = new Queue<SequenceSO>(); }
 
-        Debug.Log($"Sequence: {sequenceQueue}");
+        Debug.Log($"Queing Sequence: {sequence.name}");
         sequenceQueue.Enqueue(sequence);
     }
 
@@ -54,6 +54,8 @@ public class SequenceManager : MonoBehaviour
     private void StartNextStep()
     {
         currStepID++;
+
+        if(currentSequence.Steps.Length <= 0) { Debug.LogError($"--- No steps set to current sequence {currentSequence.name} ---"); }
 
         SequenceStepSO currStep = currentSequence.Steps[currStepID];
 
@@ -115,25 +117,78 @@ public class SequenceManager : MonoBehaviour
                 OnSequenceStepFinished();
             });
         }
-        else if(currStep.GetType() == typeof(ScoreSetterStepSO))
+        else if (currStep.GetType() == typeof(ScoreModifierSO))
         {
-            ScoreSetterStepSO newScores = (ScoreSetterStepSO)currStep;
+            ScoreModifierSO newScores = (ScoreModifierSO)currStep;
 
-            scoreManager.Setup(newScores.StartingSatisfaciton, newScores.StartingProfit);
+            if (newScores.ModifyType == ScoreModifyType.Set)
+            {
+                scoreManager.Setup(newScores.Satisfaction, newScores.Profit);
+            }
+            else if (newScores.ModifyType == ScoreModifyType.Add)
+            {
+                scoreManager.AddSatisfaction(newScores.Satisfaction, newScores.SatisfactionStatus);
+                scoreManager.AddProfit(newScores.Profit, newScores.ProfitStatus);
+            }
+
             OnSequenceStepFinished();
         }
-        else if(currStep.GetType() == typeof(PreviousChoiceSplit))
+        else if (currStep.GetType() == typeof(PreviousChoiceSplit))
         {
             PreviousChoiceSplit previousChoiceSplit = (PreviousChoiceSplit)currStep;
 
             string resultID = choiceManager.GetOptionChosenID(previousChoiceSplit.ChoiceToEvaluate.Id);
 
-            for(int i = 0; i < previousChoiceSplit.ChoiceResults.Length; i++)
+            for (int i = 0; i < previousChoiceSplit.ChoiceResults.Length; i++)
             {
                 if (previousChoiceSplit.ChoiceResults[i].OptionID == resultID)
                 {
                     QueueSequence(previousChoiceSplit.ChoiceResults[i].ResultingSequence);
                 }
+            }
+
+            OnSequenceStepFinished();
+        }
+        else if (currStep.GetType() == typeof(SequenceScoreSplitSO))
+        {
+            SequenceScoreSplitSO scoreSplitSO = (SequenceScoreSplitSO)currStep;
+
+            SequenceSO sequenceToQueue = null;
+
+            int baseNum = 0;
+            if (scoreSplitSO.ScoreType == ScoreTypeToCheck.Satisfaction)
+            {
+                Debug.Log($"BaseNum type: {scoreSplitSO.ScoreType} = {scoreManager.Satisfaction}");
+                baseNum = scoreManager.Satisfaction;
+            }
+            else if (scoreSplitSO.ScoreType == ScoreTypeToCheck.Profit)
+            {
+                Debug.Log($"BaseNum type: {scoreSplitSO.ScoreType} = {scoreManager.Profit}");
+                baseNum = scoreManager.Profit;
+            }
+
+            for (int i = 0; i < scoreSplitSO.ScoreSplits.Length; i++)
+            {
+                ScoreSplitRegion currRegion = scoreSplitSO.ScoreSplits[i];
+
+                int upperNum = currRegion.UpperLimit;
+                int lowerNum = currRegion.LowerLimit;
+
+                Debug.Log($"Upper: {upperNum}: lower {lowerNum}");
+                Debug.Log($"in region of? {baseNum >= lowerNum && baseNum < upperNum}");
+
+                if(baseNum >= lowerNum && baseNum < upperNum)
+                {
+                    Debug.Log($"Queing: {sequenceToQueue}");
+                    sequenceToQueue = currRegion.ResultingSequence;
+                }
+            }
+
+            Debug.Log($"Sequence to queue: {sequenceToQueue}");
+            if(sequenceToQueue != null)
+            {
+                
+                sequenceQueue.Enqueue(sequenceToQueue);
             }
 
             OnSequenceStepFinished();

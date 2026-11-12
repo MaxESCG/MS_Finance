@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77be8d3abc4d614408c62dfb3862c314, type: 3}
+  m_Name: J1_Seq4_A_1
+  m_EditorClassIdentifier: Assembly-CSharp::SpeakerTextSO
+  showScore: 0
+  dialogues:
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 0
+    text: You hired a non-specialist Bill of Quantities contractor who wrote the
+      scopes of works for all packages.
+  - character: {fileID: 11400000, guid: c8fcfa5882242b84b8bf1fb55659059e, type: 2}
+    emotion: 2
+    text: 'Issues arise on site with one of the most expensive, technical and early
+      packages! The temporary propping required to safely hold up a portion of the
+      building during demolition was missed by the non-specialist Bill of Quantities
+      writer. This activity is on the critical path (construction items on the programme
+      which are required to be complete before the following construction can start
+      - putting your programme at risk). You need to urgently hire a temporary works
+      surveyor, arrange a health and safety advisors visit, and get a price for providing
+      and installing the temporary propping. Arranging multiple people to get to
+      site urgently puts your programme in delay and incurs surcharges from subcontractors
+      who are scrambling to try to attend your site. The missed scope and the delay
+      is very costly and your client is not happy to be in delay this early in the
+      process!
+
+'

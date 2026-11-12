@@ -13,25 +13,29 @@ MonoBehaviour:
   m_Name: J1_Seq03_2
   m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
   showScore: 1
+  Id: e13096ad-ee7e-4e0e-8cf7-f2392d2224ec
   choiceText: How much should you put into the budget?
   options:
-  - text: "You throw everything at it. Taking the price up to \xA311,999,999. Still
+  - id: 7ef9a83f-b196-4831-8b3f-53a6fc5bd9a5
+    text: "You throw everything at it. Taking the price up to \xA311,999,999. Still
       technically in budget\u2026"
     profit: 4
     profitStatus: 0
     satisfaction: -5
     satisfactionStatus: 0
-    nextSequence: {fileID: 0}
-  - text: "You add only those which are truly necessary, taking the price up to \xA311,600,000."
+    nextSequence: {fileID: 11400000, guid: 39d6d41b5c9293d46a33287b17021722, type: 2}
+  - id: 123f83b6-499e-45c7-aaf6-ad988d95db24
+    text: "You add only those which are truly necessary, taking the price up to \xA311,600,000."
     profit: 1
     profitStatus: 0
     satisfaction: 10
     satisfactionStatus: 0
-    nextSequence: {fileID: 0}
-  - text: "You add items which are truly necessary, and a few items you think you
+    nextSequence: {fileID: 11400000, guid: 03ece884e6e5e7544b54d37bb3ac0e69, type: 2}
+  - id: d9bc8dc3-7f13-4819-85dd-97a3b8f19ca8
+    text: "You add items which are truly necessary, and a few items you think you
       could reasonable defend as being requred, taking the price up to \xA311,700,000."
     profit: 2
     profitStatus: 0
     satisfaction: 10
     satisfactionStatus: 0
-    nextSequence: {fileID: 0}
+    nextSequence: {fileID: 11400000, guid: 585f1cbf97ba76b41a2f9baebb702a2c, type: 2}
